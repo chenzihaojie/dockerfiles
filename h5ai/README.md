@@ -4,10 +4,10 @@
 
 # Usage
 
-## Commun
+## Common
 
 ```
-docker container run -it -p 80:80 \
+docker container run -d -p 80:80 \
   -v $PWD/share:/share \
   chenzihaojie/h5ai
 ```
