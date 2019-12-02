@@ -8,5 +8,5 @@ jobs:
     - name: build h5ai
       run: |
         docker login --username=${{ secrets.DOCKER_USER }} --password=${{ secrets.DOCKER_PASS }}
-        cd h5ai && docker build -t h5ai:latest .
-        docker push h5ai:latest
+        cd h5ai && docker build -t chenzihaojie/h5ai:latest .
+        docker push chenzihaojie/h5ai:latest
