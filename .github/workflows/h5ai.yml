@@ -1,0 +1,12 @@
+name: build h5ai
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: build h5ai
+      run: |
+        docker login --username=${{ secrets.DOCKER_USER }} --password=${{ secrets.DOCKER_PASS }}
+        cd h5ai && docker build -t h5ai:latest .
+        docker push h5ai:latest
